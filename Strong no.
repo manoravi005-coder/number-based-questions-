@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+int main() {
+    int n, sum = 0, k;
+    int digit;
+    scanf("%d", & n);k = n;
+    while (n > 0) { 
+        digit = n%10;
+        int fact = 1;
+        for(int i = 1; i<=digit; i++) fact *= i; 
+        sum+=fact;
+        n/=10;
+    }
+    if(sum == k) printf("strong");
+    else printf("no");
+}
